@@ -9987,7 +9987,7 @@ header#header button.navbar-toggler svg path {
   z-index: 1;
 }
 .hero.home-banner {
-  height: 80vh;
+  height: 70vh;
 }
 @media (min-width: 992px) {
   .hero.home-banner {
