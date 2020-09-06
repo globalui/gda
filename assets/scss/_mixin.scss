@@ -1,0 +1,12 @@
+@mixin shadowOnImg($csAngle,$csOpacity,$csPosition){
+  background-image: linear-gradient($csAngle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, $csOpacity) $csPosition);
+}
+
+@mixin selectorContent($cWidth,$cHeight,$cPosition,$cLeft,$cTop){
+  content:"";
+  width:$cWidth;
+  height:$cHeight;
+  position: $cPosition;
+  left:$cLeft;
+  top:$cTop
+}

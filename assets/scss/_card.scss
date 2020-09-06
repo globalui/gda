@@ -1,0 +1,150 @@
+.card-shadow {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  &:before {
+    @include selectorContent(100%, 100%, absolute, 0, unset);
+    bottom: 0;
+    @include shadowOnImg(180deg, 0.6, 110%);
+    z-index: 1;
+  }
+}
+
+.on-img-caption {
+  figcaption {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    padding: 10px 20px;
+    left: 0;
+    color: #fff;
+    font-size: calc(1rem + 0.4vw);
+  }
+}
+
+.img-zoom-animation {
+  figure,picture {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    img {
+      transition: all 0.3s ease;
+    }
+  }
+  &:hover img {
+    transform: scale(1.2);
+  }
+}
+
+
+.trip-time{
+  position:absolute;
+  top:10px;
+  left:10px;
+  border-radius:50%;
+  width:60px;
+  height:60px;
+  background-color: $green;
+  z-index:9;
+  font-weight:600;
+  color:#fff;
+  & .time-card{
+    line-height:16px;
+    width:100%;
+  }
+
+  span:first-child{
+    font-size: calc(0.9rem + 0.2vw);
+  }
+  span{
+    display: inline-block;
+    font-size: calc(0.6rem + 0.2vw);
+    font-weight:700;
+  }
+  &.small-trip-time{
+    width:40px;
+    height:40px;
+    & .time-card{
+      line-height:10px;
+    }
+
+    span:first-child{
+      font-size: calc(0.7rem + 0.1vw);
+    }
+    span{
+      display: inline-block;
+      font-size: calc(0.5rem + 0.1vw);
+      font-weight:700;
+    }
+  }
+}
+
+.top-trending-list {
+  display: flex;
+  flex-wrap: wrap;
+
+
+  .card-shadow{
+    max-height:unset;
+    &:before{
+      @include shadowOnImg(180deg, 1, 110%);
+    }
+  }
+  & li:first-child {
+    width: 100%;
+
+    & .card-box{
+      width:calc(100%);
+    }
+    @media(min-width:992px) {
+     &{
+       width: 44%;
+     }
+      & .card-box{
+        overflow: hidden;
+        height: calc(400px + 10px);
+      }
+    }
+  }
+  & > li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & .card-box{
+      width:calc(50% - 5px);
+      display: inherit;
+      overflow: hidden;
+      height: 200px;
+      margin-top: 10px;
+    }
+    @media(min-width:992px) {
+      &{
+        width: 28%;
+        flex-wrap: wrap;
+      }
+
+      & .card-box{
+        width:calc(100%);
+        margin-bottom: 10px;
+        margin-top: 0px;
+        margin-left: 10px;
+      }
+    }
+
+  }
+
+  figcaption {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    font-size: calc(1rem + 0.4vw);
+    padding: 10px 10px;
+
+    @media(min-width:992px) {
+      padding: 10px 20px;
+    }
+  }
+}
