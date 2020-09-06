@@ -9,6 +9,7 @@
 
   &.home-banner {
     height: 70vh;
+    min-height: 500px;
     @media(min-width:992px) {
       height: 100vh;
     }
