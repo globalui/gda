@@ -1,6 +1,13 @@
 html {
   scroll-behavior: smooth;
 }
-body{
+
+body {
   overflow-x: hidden;
+}
+
+.border-bottom-lg-0 {
+  @media (min-width: 992px) {
+    border-bottom: none !important;
+  }
 }

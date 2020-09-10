@@ -56,15 +56,11 @@
 
   }
   &.inner-banner {
-    height: 300px;
-
-    @media(min-width: 768px) {
-      height: calc(34vw - 100px);
-    }
-
+    height:150px;
+    background-color: $green-dark;
     @media(min-width: 992px) {
-      height: calc(34vw - 100px);
-    }
+      height:200px;
+  }
 
     .heading-text {
       font-size: calc(1rem + 2vw);
