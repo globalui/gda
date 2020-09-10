@@ -10000,6 +10000,11 @@ header#header button.navbar-toggler svg path {
     height: 650px;
   }
 }
+@media (min-width: 1400px) {
+  .hero.home-banner {
+    height: 70px;
+  }
+}
 @media (min-width: 320px) {
   .hero.home-banner .heading-text large {
     font-size: calc(2rem + 2vw);
