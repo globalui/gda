@@ -9888,6 +9888,10 @@ h3 {
     border-color: #dee2e6;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
 }
