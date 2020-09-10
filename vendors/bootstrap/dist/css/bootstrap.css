@@ -9888,6 +9888,10 @@ h3 {
     border-color: #dee2e6;
   }
 }
+body {
+  overflow-x: hidden;
+}
+
 header#header {
   position: absolute;
   width: 100%;
@@ -10264,6 +10268,25 @@ header#header button.navbar-toggler svg path {
   }
 }
 
+.single-card-box picture {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.single-card-box .caption-box {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .single-card-box picture {
+    max-width: 350px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .single-card-box .caption-box {
+    width: calc(100% - 350px);
+  }
+}
+
 .z-index-n1 {
   z-index: -1;
 }
@@ -10345,6 +10368,33 @@ header#header button.navbar-toggler svg path {
 }
 .fa-custom-icon img {
   width: 4rem;
+}
+
+.page-welcome-section {
+  position: relative;
+  overflow: hidden;
+}
+.page-welcome-section:before {
+  z-index: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  background-color: #0d1f20;
+}
+.page-welcome-section:after {
+  z-index: 0;
+  content: "";
+  width: 200%;
+  height: 50%;
+  position: absolute;
+  left: -100px;
+  top: unset;
+  bottom: -50px;
+  background-color: #fff;
+  transform: rotate(-5deg);
 }
 
 #destinationSlider {

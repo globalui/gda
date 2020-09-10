@@ -76,6 +76,23 @@
     width: 4rem;
   }
 }
+//page welcome section
+.page-welcome-section{
+  position: relative;
+  overflow: hidden;
+  &:before {
+    z-index: 0;
+    @include selectorContent(100%, 100%, absolute, 0, -1px);
+    background-color: $success-dark;
+  }
+  &:after {
+    z-index: 0;
+    @include selectorContent(200%,50%, absolute, -100px, unset);
+    bottom:-50px;
+    background-color: $white;
+    transform: rotate(-5deg);
+  }
+}
 
 //owl
 #destinationSlider {
@@ -231,3 +248,4 @@
     color: #797878;
   }
 }
+
