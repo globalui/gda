@@ -8,41 +8,44 @@
   }
 
   &.home-banner {
-    height: 70vh;
+    height: 90vh;
     min-height: 400px;
-    @media(min-width:992px) {
-      height: 100vh;
+    @media(min-width: 992px) {
+      height: 85vh;
+    }
+    @media(min-width: 1280px) {
+      height: 700px;
     }
 
     .heading-text {
 
-     @media(min-width:320px){
-       large{
-         font-size: calc(2rem + 2vw);
-         &.large{
-           font-size: calc(1rem + 2vw);
-         }
-         &.large2{
-           font-size: calc(1.8rem + 2vw);
-         }
-       }
-       small{
-         font-size: calc(0.9rem + 2vw);
-       }
-     }
-      @media(min-width:992px){
-        large{
-          font-size: calc(1rem + 2vw);
-          line-height:calc(1rem + 2vw);
-          &.large{
+      @media(min-width: 320px) {
+        large {
+          font-size: calc(2rem + 2vw);
+          &.large {
             font-size: calc(1rem + 2vw);
           }
-          &.large2{
+          &.large2 {
             font-size: calc(1.8rem + 2vw);
           }
         }
-        small{
-          line-height:calc(1rem + 2vw);
+        small {
+          font-size: calc(0.9rem + 2vw);
+        }
+      }
+      @media(min-width: 992px) {
+        large {
+          font-size: calc(1rem + 2vw);
+          line-height: calc(1rem + 2vw);
+          &.large {
+            font-size: calc(1rem + 2vw);
+          }
+          &.large2 {
+            font-size: calc(1.8rem + 2vw);
+          }
+        }
+        small {
+          line-height: calc(1rem + 2vw);
           font-size: calc(0.9rem + 2vw);
         }
       }
@@ -52,11 +55,11 @@
   &.inner-banner {
     height: 300px;
 
-    @media(min-width:768px) {
+    @media(min-width: 768px) {
       height: calc(34vw - 100px);
     }
 
-    @media(min-width:992px) {
+    @media(min-width: 992px) {
       height: calc(34vw - 100px);
     }
 
@@ -65,23 +68,76 @@
     }
 
   }
-  picture{
-    top:0;
-    width:100%;
-    &:before{
+  picture {
+    top: 0;
+    width: 100%;
+    &:before {
       position: absolute;
       content: "";
       top: 0;
       width: 100%;
       height: 100%;
-      @include shadowOnImg(0deg,1,110%);
+      @include shadowOnImg(0deg, 1, 110%);
     }
   }
 
-  &.sub-banner{
-    height:156px;
+  &.sub-banner {
+    height: 156px;
     background: $blue;
   }
 
 }
 
+.iframe-banner {
+  position: fixed;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  animation: bounceAnimation 2s infinite;
+  -webkit-animation: bounceAnimation 2s infinite;
+  iframe {
+    border: none;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    padding: 0px 0px;
+    position: sticky;
+    botton: 0px;
+  }
+}
+
+@-webkit-keyframes bounceAnimation {
+  0% {
+    bottom:5px;
+  }
+  25% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 5px;
+  }
+  75% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 5px;
+  }
+}
+@keyframes bounceAnimation {
+  0% {
+    bottom:5px;
+  }
+  25% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 5px;
+  }
+  75% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 5px;
+  }
+}
