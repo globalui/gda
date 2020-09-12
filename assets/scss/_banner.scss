@@ -89,12 +89,10 @@
 
 .iframe-banner {
   position: fixed;
-  bottom: 5%;
+  bottom: 20px;
   left: 0;
   width: 100%;
   z-index: 1;
-  animation: bounceAnimation 2s infinite;
-  -webkit-animation: bounceAnimation 2s infinite;
   iframe {
     border: none;
     overflow: hidden;

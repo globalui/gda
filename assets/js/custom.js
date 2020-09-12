@@ -16,19 +16,21 @@ $('[data-gallery="true"] li').on('click', 'a', function (e) {
     if (countClick <= 1) {
         generateHtml();
     } else {
-        console.log('false');
+      //  console.log('false');
     }
 
     var getPicIndex = $(this).find('picture').attr('data-count');
-    console.log(getPicIndex);
+   console.log(getPicIndex);
 
-    $('#photoGalleryCarousel').owlCarousel({
+    var $owlGallery =  $('#photoGalleryCarousel');
+
+    $owlGallery.owlCarousel({
         loop: false,
         margin: 10,
         startPosition: getPicIndex,
         dots: false,
         nav: true,
-        navText: ['<img src="assets/img/icons/arrow.svg">', '<img src="assets/img/icons/arrow.svg">'],
+        navText: ['<img src="assets/img/icons/arrow-black.svg">', '<img src="assets/img/icons/arrow-black.svg">'],
         items: 1
     });
     $('.photoGalleryModel').addClass('active-model');
@@ -40,13 +42,13 @@ $('[data-gallery="true"] li').on('click', 'a', function (e) {
 function generateHtml() {
     var html = '';
     html += '<section class="py-lg-6 photoGalleryModel">';
-    html += '<div class="container">';
-    html += '<div class="row"><div class="col-12 px-0 position-relative py-3">';
+    html += '<div class="container position-relative">';
+    html += '<div class="row"><div class="col-12 px-lg-0 position-relative py-3">';
     html += '<button class="close-btn btn btn-light" data-galleryDismiss="true"> <i class="fa fa-times"></i> Close</button>';
     html += '</div> </div>';
     html += '<div class="row">';
-    html += '<div class="col-12 col-lg-8 col-xl-6 mx-auto px-0">';
-    html += '<div id="photoGalleryCarousel" class="owl-carousel owl-theme owl-left-right-navbar  px-lg-4 ">';
+    html += '<div class="col-12 col-lg-8 col-xl-6 mx-auto px-lg-0">';
+    html += '<div id="photoGalleryCarousel" class="photo-gallery-nav position-static owl-carousel owl-theme owl-left-right-navbar  px-lg-4 ">';
 
     var pictureCountr = 0;
     $('[data-gallery="true"] picture').each(function () {
@@ -70,6 +72,7 @@ function generateHtml() {
 $(document).on('click', '[data-galleryDismiss="true"]', function () {
     $('.photoGalleryModel').removeClass('active-model');
     $('body').removeAttr('style');
+    $('#photoGalleryCarousel').owlCarousel('destroy');
 });
 
 
