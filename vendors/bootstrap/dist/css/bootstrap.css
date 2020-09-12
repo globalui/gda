@@ -10465,7 +10465,7 @@ header#header button.navbar-toggler svg path {
 @media (min-width: 992px) {
   .photo-gallery-nav .owl-nav {
     position: absolute;
-    top: calc(50vh - 100px);
+    top: calc(50vh);
     width: 100%;
     left: 0;
     display: flex;
