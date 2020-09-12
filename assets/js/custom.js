@@ -28,7 +28,7 @@ $('[data-gallery="true"] li').on('click', 'a', function (e) {
         loop: false,
         margin: 10,
         startPosition: getPicIndex,
-        dots: false,
+        dots: true,
         nav: true,
         navText: ['<img src="assets/img/icons/arrow-black.svg">', '<img src="assets/img/icons/arrow-black.svg">'],
         items: 1
