@@ -44,7 +44,7 @@ function generateHtml() {
     html += '<section class="py-lg-6 photoGalleryModel">';
     html += '<div class="container position-relative">';
     html += '<div class="row"><div class="col-12 px-lg-0 position-relative py-3">';
-    html += '<button class="close-btn btn btn-light" data-galleryDismiss="true"> <i class="fa fa-times"></i> Close</button>';
+    html += '<button class="close-btn btn btn-outline-dark px-4" data-galleryDismiss="true"> <i class="fa fa-times"></i> Close</button>';
     html += '</div> </div>';
     html += '<div class="row">';
     html += '<div class="col-12 col-lg-8 col-xl-6 mx-auto px-lg-0">';
