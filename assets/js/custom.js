@@ -4,7 +4,7 @@ $('.navbar-toggler').on('click', function () {
 
 $('[data-navClose="true"]').on('click', function () {
     $('#navbarSupportedContent').removeClass('show');
-    $('body').removeAttr('style');
+     $('body').removeAttr('style');
 });
 
 //photo gallery
@@ -43,7 +43,7 @@ function generateHtml() {
     var html = '';
     html += '<section class="py-lg-6 photoGalleryModel">';
     html += '<div class="container position-relative">';
-    html += '<div class="row"><div class="col-12 px-lg-0 position-relative py-3">';
+    html += '<div class="row"><div class="col-12 px-lg-0 position-relative py-3 ">';
     html += '<button class="close-btn btn btn-outline-dark px-4" data-galleryDismiss="true"> <i class="fa fa-times"></i> Close</button>';
     html += '</div> </div>';
     html += '<div class="row">';
@@ -74,6 +74,22 @@ $(document).on('click', '[data-galleryDismiss="true"]', function () {
     $('body').removeAttr('style');
     $('#photoGalleryCarousel').owlCarousel('destroy');
 });
+
+
+
+$(window).on('scroll',function () {
+    var getWindowTop = $(this).scrollTop();
+    var getTopPosition = $('.trip-heightlight-section').offset().top;
+
+    if(getWindowTop >= getTopPosition){
+        $('.nav-sticky-top').addClass('active');
+        console.log(getWindowTop);
+    }else{
+        $('.nav-sticky-top').removeClass('active');
+    }
+   // console.log(getTopPosition);
+});
+
 
 
 

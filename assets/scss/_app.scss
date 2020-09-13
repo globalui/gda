@@ -5,4 +5,31 @@
 @import "type";
 @import "card";
 @import "micro-settings";
-@import "owl"; 
+@import "owl";
+
+@media (max-width: 992px) {
+  .custom-sticky-top {
+    ul.nav {
+      flex-wrap: nowrap !important;
+      overflow: scroll;
+    }
+    ul.nav-sticky-top{
+      display: none !important;
+      top: 0;
+      width: 100%;
+      justify-content: space-between !important;
+      background:#0d1f20;
+      left: 0;
+      z-index: 99;
+      padding: 10px;
+      &.active{
+        position: fixed;
+        display: flex !important;
+      }
+    }
+  }
+}
+footer{
+  position: relative;
+  z-index:0;
+}
