@@ -10702,15 +10702,19 @@ header#header button.navbar-toggler svg path {
   left: 0;
   top: 100%;
   width: 100%;
-  height: 100%;
+  height: 0;
+  overflow: hidden;
   background: #fff;
   transition: all 0.3s ease-out;
   z-index: -1;
+  opacity: 0;
 }
 .photoGalleryModel.active-model {
   top: 0;
   transition: all 0.2s ease-out;
   z-index: 9;
+  opacity: 1;
+  height: 100%;
 }
 .photoGalleryModel .close-btn {
   left: 0;
