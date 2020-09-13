@@ -379,16 +379,16 @@
                                     </div>
                                 </div>
                                 <div class="w-100 mt-5 d-flex justify-content-center">
-                                   <div>
-                                       <a class="btn btn-light" href="#day1">Day 1</a>
-                                       <a class="btn btn-light" href="#day2">Day 2</a>
+                                    <div>
+                                        <a class="btn btn-light" href="#day1">Day 1</a>
+                                        <a class="btn btn-light" href="#day2">Day 2</a>
 
-                                       <!--<a class="btn btn-light" href="#day3">Day 3</a>
-                                       <a class="btn btn-light" href="#day4">Day 4</a>
-                                       <a class="btn btn-light" href="#day5">Day 5</a>
-                                       <a class="btn btn-light" href="#day6">Day 6</a>
-                                       <a class="btn btn-light" href="#day7">Day 7</a>-->
-                                   </div>
+                                        <!--<a class="btn btn-light" href="#day3">Day 3</a>
+                                        <a class="btn btn-light" href="#day4">Day 4</a>
+                                        <a class="btn btn-light" href="#day5">Day 5</a>
+                                        <a class="btn btn-light" href="#day6">Day 6</a>
+                                        <a class="btn btn-light" href="#day7">Day 7</a>-->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -652,15 +652,15 @@
 
     //sticky elements
 
-    $(window).on('scroll',function () {
+    $(window).on('scroll', function () {
         var getWindowTop = $(this).scrollTop();
         var getTopPosition = $('.trip-heightlight-section').offset().top;
 
-        if(getWindowTop >= getTopPosition){
+        if (getWindowTop >= getTopPosition) {
             $('.nav-sticky-top').addClass('active');
             $('footer').addClass('active');
             // console.log(getWindowTop);
-        }else{
+        } else {
             $('.nav-sticky-top').removeClass('active');
             $('footer').removeClass('active');
         }
