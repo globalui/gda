@@ -62,3 +62,36 @@
   background: #869791;
 }
 
+
+
+//owl itinerary
+.custom-owl-itinerary{
+  position: relative;
+  .owl-caption{
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    position: relative;
+    top: 50px;
+    margin: 10px;
+  }
+  l-item-img{
+    width:100%;
+  }
+  @media(min-width: 992px){
+    .owl-caption{
+      width:45%;
+      padding: 2rem;
+      position: absolute;
+      left:0%;
+      height:70%;
+    }
+    .owl-item-img{
+      width:60%;
+    }
+
+  }
+}
+
+
+

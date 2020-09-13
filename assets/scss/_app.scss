@@ -15,7 +15,7 @@
     }
     ul.nav-sticky-top{
       display: none !important;
-      top: 0;
+      bottom: 0;
       width: 100%;
       justify-content: space-between !important;
       background:#0d1f20;
@@ -28,6 +28,22 @@
       }
     }
   }
+}
+
+footer{
+  &.active{
+    margin-bottom: 4rem;
+    &  + .iframe-banner{
+      bottom: -100px;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+
+.position-sticky{
+  top:0;
+  z-index:9;
 }
 footer{
   position: relative;

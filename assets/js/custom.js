@@ -77,19 +77,6 @@ $(document).on('click', '[data-galleryDismiss="true"]', function () {
 
 
 
-$(window).on('scroll',function () {
-    var getWindowTop = $(this).scrollTop();
-    var getTopPosition = $('.trip-heightlight-section').offset().top;
-
-    if(getWindowTop >= getTopPosition){
-        $('.nav-sticky-top').addClass('active');
-        console.log(getWindowTop);
-    }else{
-        $('.nav-sticky-top').removeClass('active');
-    }
-   // console.log(getTopPosition);
-});
-
 
 
 
