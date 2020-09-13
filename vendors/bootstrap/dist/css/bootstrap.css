@@ -10699,17 +10699,18 @@ header#header button.navbar-toggler svg path {
 
 .photoGalleryModel {
   position: fixed;
-  z-index: 9;
   left: 0;
   top: 100%;
   width: 100%;
   height: 100%;
   background: #fff;
   transition: all 0.3s ease-out;
+  z-index: -1;
 }
 .photoGalleryModel.active-model {
   top: 0;
   transition: all 0.2s ease-out;
+  z-index: 9;
 }
 .photoGalleryModel .close-btn {
   left: 0;
