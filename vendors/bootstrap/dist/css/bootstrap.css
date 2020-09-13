@@ -10735,6 +10735,10 @@ header#header button.navbar-toggler svg path {
   /* same as padding-left set on li */
 }
 
+.custom-nav-tab li.active {
+  border-bottom: 3px solid #268f12;
+}
+
 /*
     oWl theme css
 */

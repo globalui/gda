@@ -450,3 +450,10 @@
     width: 1.3em; /* same as padding-left set on li */
   }
 }
+
+//nav tab
+.custom-nav-tab {
+  li.active{
+    border-bottom:3px solid $green;
+  }
+}
