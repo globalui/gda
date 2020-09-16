@@ -328,8 +328,9 @@
                         <div class="col-12 col-lg-12">
                             <div id="Itinerary" class="tab-pane active">
                                 <h3 class="h2 text-white">Itinerary</h3>
-                                <div class="owl-carousel owl-theme px-lg-6 custom-owl-itinerary" id="owlItinerary">
-                                    <div class="item" data-hash="day1">
+                                <div class="owl-carousel owl-theme px-lg-6 custom-owl-itinerary owl-nav-left-right"
+                                     id="owlItinerary">
+                                    <div class="item" data-hash="0">
                                         <div class="d-flex flex-wrap align-items-center justify-content-end">
                                             <div class="owl-caption">
                                                 <h4>
@@ -353,7 +354,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item" data-hash="day2">
+                                    <div class="item" data-hash="1">
                                         <div class="d-flex flex-wrap align-items-center justify-content-end">
                                             <div class="owl-caption">
                                                 <h4>
@@ -379,9 +380,9 @@
                                     </div>
                                 </div>
                                 <div class="w-100 mt-5 d-flex justify-content-center">
-                                    <div>
-                                        <a class="btn btn-light" href="#day1">Day 1</a>
-                                        <a class="btn btn-light" href="#day2">Day 2</a>
+                                    <div id="data-hash-trigger">
+                                        <a class="btn btn-light" href="#0">Day 1</a>
+                                        <a class="btn btn-light" href="#1">Day 2</a>
 
                                         <!--<a class="btn btn-light" href="#day3">Day 3</a>
                                         <a class="btn btn-light" href="#day4">Day 4</a>
@@ -400,7 +401,12 @@
                     <div class="col-12 col-lg-12">
                         <div id="Date" class="tab-pane active">
                             <h3 class="h2">Date</h3>
-                            <p>Some content in menu 2.</p>
+                            <div mbsc-form class="dms-calendar-booking">
+                                <div class="mbsc-form-group">
+                                    <div class="mbsc-form-group-title">Single date & appointment booking</div>
+                                    <div id="demo-booking-single"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -410,6 +416,75 @@
                     <div class="col-12 col-lg-12">
                         <div id="FAQ" class="tab-pane active">
                             <h3 class="h2">FAQ's</h3>
+                            <div id="accordion" class="custom-accordion">
+
+                                <div class="card active-card">
+                                    <div class="card-header">
+                                        <a class=" d-flex h6 accordion-link-tigger" data-toggle="collapse" aria-expanded="true" href="#collapseOne">
+                                            When should I apply for the volunteer programs in Vietnam?
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" data-parent="#accordion" >
+                                        <div class="card-body">
+                                            It is advised to apply for the projects once the volunteering/ traveling
+                                            dates are decided as there are limited spots available. The application fee
+                                            is valid for one full year and can be sent earlier than the desired year of
+                                            volunteering for timely confirmation of the seat. As soon as you decide the
+                                            travel dates, we suggest you to apply for the program and hold your spot.
+                                            The earlier you apply, the better it is, as you would get more time to be
+                                            prepared for your program in Hanoi, Vietnam, and complete the necessary
+                                            documentation, Visa formalities as well as take the vaccinations in time.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collapsed d-flex h6 accordion-link-tigger" data-toggle="collapse" href="#collapseTwo">
+                                            How long will it take to process my application? Will my application be
+                                            accepted ?
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Usually, it takes around 10-12 working days for the application to be
+                                            processed and placement to be confirmed. After we review your CV and
+                                            documents, your booking is confirmed and the booking confirmation is updated
+                                            in your My Account and you can view the information in your account. The
+                                            application acceptance depends on the availability of seats in the project
+                                            as well as the eligibility criteria of the program (age, skills and
+                                            experience etc.).
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collapsed d-flex h6 accordion-link-tigger" data-toggle="collapse" href="#collapseThree">
+                                            Are there any necessary requirements to participate in the Hanoi - Vietnam
+                                            volunteer programs?
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Below are the necessary requirements to participate in the Vietnam volunteer
+                                            projects:
+                                            Volunteers must be 18 years or older at the time of joining the project.
+                                            Volunteers joining the medical volunteer project must be either Pre-Medical,
+                                            Medical or Nursing students or possess other qualifications related to the
+                                            medical and nursing field. Medical professionals such as doctors and nurses
+                                            are also welcome to join the program as well.
+                                            Volunteers need to have an open mind and flexible attitude for working in a
+                                            new and different environment.
+                                            The volunteer should bring energy and enthusiasm to make a difference.
+                                            Clean Criminal Background Check Report for participants joining Childcare
+                                            and Teaching Projects.
+                                            Participants must be in good health.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -632,21 +707,36 @@
 <script src="assets/js/custom.js"></script>
 
 
+
 <script src="vendors/owl/js/owl.carousel.js"></script>
 <link rel="stylesheet" href="vendors/owl/css/owl.carousel.min.css">
 
 <!--Itinerary Carousel-->
-
 <script>
     $('#owlItinerary').owlCarousel({
         items: 1,
         loop: false,
         center: true,
-        margin: 0,
-        dots: false,
+        margin: 10,
+        dots: true,
+        nav: true,
+        navText: ['<img src="assets/img/icons/arrow.svg">', '<img src="assets/img/icons/arrow.svg">'],
         URLhashListener: true,
         autoplayHoverPause: true,
         startPosition: 'URLHash'
+    });
+    $('#owlItinerary').on('changed.owl.carousel', function (event) {
+
+        var hasTriggerParent = $('#data-hash-trigger a');
+
+        hasTriggerParent.each(function () {
+
+            if ('#' + event.item.index == $(this).attr('href')) {
+                $(this).addClass('active');
+            } else {
+                $('#data-hash-trigger a').removeClass('active');
+            }
+        });
     });
 
 
@@ -667,6 +757,22 @@
         // console.log(getTopPosition);
     });
 
+
+    //custom-accordion
+    $('.collapse').on('shown.bs.collapse', function () {
+        $(this).parent().addClass('active-card');
+    });
+
+    $('.collapse').on('hidden.bs.collapse', function () {
+        $(this).parent().removeClass('active-card');
+    });
 </script>
+
+
+
+<link rel="stylesheet" href="vendors/calendar/css/mobiscroll.jquery.min.css">
+<script src="vendors/calendar/js/mobiscroll.jquery.min.js"></script>
+<script src="assets/js/calendar.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,29 @@
+.custom-accordion {
+  .card {
+    padding: 1rem;
+    border: 1px solid;
+    border-color: $gray-300;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    &.active-card {
+      border-color: $green
+    }
+  }
+  .accordion-link-tigger{
+    justify-content: space-between;
+
+    &:after {
+      transition: all .5s ease;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      top: 15px;
+      right: 15px;
+      content: "\f067";
+    }
+    &[aria-expanded=true]:after {
+      content: "\f068";
+    }
+  }
+}

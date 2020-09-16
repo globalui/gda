@@ -10615,6 +10615,12 @@ header#header button.navbar-toggler svg path {
 .photo-gallery > li:first-child {
   width: 100%;
 }
+@media (min-width: 992px) {
+  .photo-gallery > li:first-child a {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
 .photo-gallery > li:first-child img {
   width: 100%;
   max-height: unset;
@@ -10679,6 +10685,14 @@ header#header button.navbar-toggler svg path {
     margin-bottom: 10px;
     margin-top: 0px;
     margin-left: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .photo-gallery > li:last-child a:first-child {
+    border-top-right-radius: 10px;
+  }
+  .photo-gallery > li:last-child a:nth-child(2) {
+    border-bottom-right-radius: 10px;
   }
 }
 .photo-gallery .remaning-images {
@@ -10815,7 +10829,6 @@ header#header button.navbar-toggler svg path {
   background-color: #fff;
   padding: 1rem;
   position: relative;
-  top: 50px;
   margin: 10px;
 }
 .custom-owl-itinerary l-item-img {
@@ -10827,11 +10840,81 @@ header#header button.navbar-toggler svg path {
     padding: 2rem;
     position: absolute;
     left: 0%;
-    height: 70%;
+    height: 80%;
   }
   .custom-owl-itinerary .owl-item-img {
     width: 60%;
   }
+}
+@media (min-width: 992px) {
+  .custom-owl-itinerary.owl-nav-left-right .owl-nav {
+    position: absolute;
+    width: 100%;
+  }
+  .custom-owl-itinerary.owl-nav-left-right .owl-nav button {
+    top: -250px;
+    width: 40px;
+    height: 40px;
+    background-color: #268f12 !important;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .custom-owl-itinerary.owl-nav-left-right .owl-nav button img {
+    width: 12px !important;
+  }
+}
+
+.custom-accordion .card {
+  padding: 1rem;
+  border: 1px solid;
+  border-color: #dee2e6;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.custom-accordion .card.active-card {
+  border-color: #268f12;
+}
+.custom-accordion .accordion-link-tigger {
+  justify-content: space-between;
+}
+.custom-accordion .accordion-link-tigger:after {
+  transition: all 0.5s ease;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  top: 15px;
+  right: 15px;
+  content: "";
+}
+.custom-accordion .accordion-link-tigger[aria-expanded=true]:after {
+  content: "";
+}
+
+.custom-accordion .card {
+  padding: 1rem;
+  border: 1px solid;
+  border-color: #dee2e6;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.custom-accordion .card.active-card {
+  border-color: #268f12;
+}
+.custom-accordion .accordion-link-tigger {
+  justify-content: space-between;
+}
+.custom-accordion .accordion-link-tigger:after {
+  transition: all 0.5s ease;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  top: 15px;
+  right: 15px;
+  content: "";
+}
+.custom-accordion .accordion-link-tigger[aria-expanded=true]:after {
+  content: "";
 }
 
 @media (max-width: 992px) {
