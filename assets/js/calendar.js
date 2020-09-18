@@ -1,88 +1,67 @@
-mobiscroll.settings = {
-    theme: 'ios',
-    themeVariant: 'light'
-};
+// initialize your calendar, once the page's DOM is ready
 
-$(function () {
-    var now = new Date(),
-        currYear = now.getFullYear(),
-        currMonth = now.getMonth(),
-        currDay = now.getDate(),
-        min = new Date(currYear, currMonth, currDay),
-        max = new Date(currYear, currMonth + 6, currDay),
-        firstload = true;
+$(document).ready(function () {
 
-    $('#demo-booking-single').mobiscroll().calendar({
-        display: 'inline',
-        controls: ['calendar'],
-        min: min,
-        max: max,
-        yearChange: false,
-        responsive: {
-            xsmall: {
-                months: 1
-            },
-            medium: {
-                months: 2
-            }
+    $('#calendar').evoCalendar({
+        eventListToggler:false,
+
+        getActiveEvents: true,
+        theme: 'Midnight Blue',
+        'eventDisplayDefault': true,
+        calendarEvents: [{
+            id: 1,
+            date: "May/13/2020",
+            type: "not-available"
         },
-        onPageLoading: function (event, inst) {
-            getPrices(event.firstDay, function callback(bookings) {
-                inst.settings.labels = bookings.labels
-                inst.settings.invalid = bookings.invalid;
-                inst.redraw();
-            });
+            {
+                id: 2,
+                date: "May/14/2020",
+                type: "fillingfast"
+            },
+            {
+                id: 3,
+                date: "May/15/2020",
+                type: "available"
+            },
+            {
+                id: 3,
+                date: "May/15/2021",
+                type: "available"
+            }
+        ]
+
+    })
+
+    function customCalenderFunction() {
+        var setStartYear = '2020';
+        var setLastYear = '2021';
+
+        var getCYear = $('.calendar-year').children('p').text();
+        $('[data-year-val="prev"]').addClass('d-none');
+
+        if (getCYear === setStartYear) {
+            $('[data-year-val="prev"]').addClass('d-none');
+            $('[data-year-val="next"]').removeClass('d-none');
         }
+        if (getCYear != setStartYear) {
+            $('[data-year-val="prev"]').removeClass('d-none');
+            $('[data-year-val="next"]').removeClass('d-none');
+        }
+        if (getCYear === setLastYear) {
+            $('[data-year-val="next"]').addClass('d-none');
+            $('[data-year-val="prev"]').removeClass('d-none');
+        }
+    }
+    customCalenderFunction();
+
+    $('.calendar-year button').on('click', function(){
+        customCalenderFunction();
     });
 
+});
 
 
-    function getPrices(d, callback) {
-        var invalid = [],
-            labels = [];
-
-        mobiscroll.util.getJson('https://trial.mobiscroll.com/getprices/?year=' + d.getFullYear() + '&month=' + d.getMonth(), function (bookings) {
-            for (var i = 0; i < bookings.length; ++i) {
-                var booking = bookings[i],
-                    d = new Date(booking.d);
-
-                if (booking.price > 0) {
-                    labels.push({
-                        d: d,
-                        text: '$' + booking.price,
-                        background: 'none',
-                        color: '#e1528f'
-                    });
-                } else {
-                    invalid.push(d);
-                }
-            }
-            callback({ labels: labels, invalid: invalid });
-        }, 'jsonp');
-    }
-
-    function getBookings(d, callback) {
-        var invalid = [],
-            labels = [];
-
-        mobiscroll.util.getJson('https://trial.mobiscroll.com/getbookings/?year=' + d.getFullYear() + '&month=' + d.getMonth(), function (bookings) {
-            for (var i = 0; i < bookings.length; ++i) {
-                var booking = bookings[i],
-                    d = new Date(booking.d);
-
-                if (booking.nr > 0) {
-                    labels.push({
-                        d: d,
-                        text: booking.nr + ' SPOTS',
-                        background: 'none',
-                        color: '#e1528f'
-                    });
-                } else {
-                    invalid.push(d);
-                }
-            }
-            callback({ labels: labels, invalid: invalid });
-        }, 'jsonp');
-    }
-
+//mobile custom show moth list
+$(document).on('click','#monthTrigger',function(){
+    $('#calendar').toggleClass('sidebar-hide');
 });

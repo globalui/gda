@@ -401,10 +401,15 @@
                     <div class="col-12 col-lg-12">
                         <div id="Date" class="tab-pane active">
                             <h3 class="h2">Date</h3>
-                            <div mbsc-form class="dms-calendar-booking">
-                                <div class="mbsc-form-group">
-                                    <div class="mbsc-form-group-title">Single date & appointment booking</div>
-                                    <div id="demo-booking-single"></div>
+                            <div mbsc-form class="dms-calendar-booking bh-tr">
+                                <div class="w-100 border shadow radius-10 overflow-hidden">
+                                    <div id="calendar"></div>
+                                    <div class="col-xs-12 dates_indicator mt-3 small">
+                                        <span class="indicator_available position-relative">Available</span>
+                                        <span class="indicator_fast_filling position-relative">Filling Fast</span>
+                                        <span class="indicator_notavailable position-relative">Not Available</span>
+                                        <span class="indicator_pastdate position-relative">Past Date</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -770,9 +775,12 @@
 
 
 
-<link rel="stylesheet" href="vendors/calendar/css/mobiscroll.jquery.min.css">
-<script src="vendors/calendar/js/mobiscroll.jquery.min.js"></script>
+<!-- Calender Style -->
+<script src="vendors/evo-calendar/js/evo-calendar.js"></script>
 <script src="assets/js/calendar.js"></script>
+
+<link rel="stylesheet" type="text/css" href="vendors/evo-calendar/css/evo-calendar.css">
+<link rel="stylesheet" type="text/css" href="vendors/evo-calendar/css/evo-calendar.midnight-blue.css">
 
 </body>
 </html>
