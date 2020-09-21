@@ -10761,6 +10761,7 @@ header#header button.navbar-toggler svg path {
   margin-top: 10px;
   text-align: center;
   -webkit-tap-highlight-color: transparent;
+  height: 0;
 }
 
 .owl-theme .owl-nav [class*=owl-] {
