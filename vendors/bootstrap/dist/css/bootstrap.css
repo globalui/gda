@@ -10333,10 +10333,6 @@ header#header button.navbar-toggler svg path {
     top: -50px;
   }
 }
-.position-sticky {
-  top: 0px;
-}
-
 .ripped-green:after {
   content: "";
   width: 100%;
@@ -10934,6 +10930,7 @@ footer.active + .iframe-banner {
 .position-sticky {
   top: 0;
   z-index: 9;
+  position: sticky;
 }
 
 footer {
