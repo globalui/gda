@@ -10919,11 +10919,17 @@ header#header button.navbar-toggler svg path {
     background: #0d1f20;
     left: 0;
     z-index: 99;
-    padding: 10px;
+    padding: 5px 10px;
   }
   .custom-sticky-top ul.nav-sticky-top.active {
     position: fixed;
     display: flex !important;
+  }
+  .custom-sticky-top .btn-lg {
+    padding: 0.2rem 1.5rem;
+    font-size: calc(1rem + 0.3vw);
+    line-height: 1.5;
+    border-radius: 0.2rem;
   }
 }
 footer.active {
