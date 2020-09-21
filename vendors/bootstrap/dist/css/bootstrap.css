@@ -10641,6 +10641,7 @@ header#header button.navbar-toggler svg path {
   .photo-gallery > li:first-child .card-box {
     overflow: hidden;
     height: calc(400px + 10px);
+    margin-left: 0px;
   }
 }
 .photo-gallery li {
@@ -10754,6 +10755,15 @@ header#header button.navbar-toggler svg path {
   border-bottom: 3px solid #268f12;
 }
 
+.more-info-ssection .fa {
+  font-size: calc(0.8rem + 1vw);
+  color: #383838;
+}
+.more-info-ssection h4 {
+  font-size: calc(0.9rem + 0.3vw);
+  color: #383838;
+}
+
 /*
     oWl theme css
 */
@@ -10773,10 +10783,10 @@ header#header button.navbar-toggler svg path {
   display: inline-block;
   cursor: pointer;
   border-radius: 3px;
+  height: 60px;
 }
 
 .owl-theme .owl-nav [class*=owl-]:hover {
-  background: #869791;
   color: #FFF;
   text-decoration: none;
 }
@@ -10850,7 +10860,8 @@ header#header button.navbar-toggler svg path {
 @media (min-width: 992px) {
   .custom-owl-itinerary.owl-nav-left-right .owl-nav {
     position: absolute;
-    width: 100%;
+    width: calc(100% - 90px);
+    left: 110px;
   }
   .custom-owl-itinerary.owl-nav-left-right .owl-nav button {
     top: -250px;
@@ -10932,14 +10943,6 @@ header#header button.navbar-toggler svg path {
     border-radius: 0.2rem;
   }
 }
-footer.active {
-  margin-bottom: 4rem;
-}
-footer.active + .iframe-banner {
-  bottom: -100px;
-  transition: all 0.3s ease;
-}
-
 .position-sticky {
   top: 0;
   z-index: 9;
@@ -10949,6 +10952,16 @@ footer.active + .iframe-banner {
 footer {
   position: relative;
   z-index: 0;
+}
+
+@media (max-width: 992px) {
+  footer.active {
+    margin-bottom: 4rem;
+  }
+  footer.active + .iframe-banner {
+    bottom: -100px;
+    transition: all 0.3s ease;
+  }
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

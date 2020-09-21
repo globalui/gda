@@ -41,7 +41,7 @@
     top: -50px;
   }
 }
- 
+
 
 //ripped paper
 .ripped-green {
@@ -349,6 +349,7 @@
       & .card-box {
         overflow: hidden;
         height: calc(400px + 10px);
+        margin-left:0px;
       }
     }
   }
@@ -474,5 +475,16 @@
 .custom-nav-tab {
   .active {
     border-bottom: 3px solid $green;
+  }
+}
+
+.more-info-ssection{
+  .fa{
+    font-size:calc(0.8rem + 1vw);
+    color:#383838;
+  }
+  h4{
+    font-size:calc(0.9rem + 0.3vw);
+    color:#383838;
   }
 }

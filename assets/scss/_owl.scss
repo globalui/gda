@@ -17,10 +17,10 @@
   display: inline-block;
   cursor: pointer;
   border-radius: 3px;
+  height: 60px;
 }
 
 .owl-theme .owl-nav [class*='owl-']:hover {
-  background: #869791;
   color: #FFF;
   text-decoration: none;
 }
@@ -94,7 +94,8 @@
   @media (min-width: 992px) {
     &.owl-nav-left-right .owl-nav{
       position: absolute;
-      width:100%;
+      width:calc(100% - 90px);
+      left: 110px;
       & button {
         top: -250px;
         width: 40px;
@@ -110,6 +111,8 @@
     }
   }
 }
+
+
 
 
 
