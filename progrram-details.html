@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.css">
     <link href="vendors/fontawesome/dist/css/all.css" rel="stylesheet">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
 
 <!--Header-->
@@ -246,13 +246,32 @@
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-12 col-lg-auto d-flex align-items-end">
-                        <ul class="nav custom-nav-tab">
+                        <nav class="navbar custom-nav-tab">
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-white btn btn-lg px-4" href="#Overview">Overview</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white btn btn-lg px-4" href="#Inclusions">Inclusions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white btn btn-lg px-4" href="#Itinerary">Itinerary</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white btn btn-lg px-4" href="#Date">Date</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white btn btn-lg px-4" href="#FAQ">FAQ's</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!--<ul class="nav custom-nav-tab" id="scrollSPY">
                             <li class="active"><a class="text-white btn btn-lg px-4" href="#Overview">Overview</a></li>
                             <li><a class="text-white btn btn-lg px-4" href="#Inclusions">Inclusions</a></li>
                             <li><a class="text-white btn btn-lg px-4" href="#Itinerary">Itinerary</a></li>
                             <li><a class="text-white btn btn-lg px-4" href="#Date">Date</a></li>
                             <li><a class="text-white btn btn-lg px-4" href="#FAQ">FAQ's</a></li>
-                        </ul>
+                        </ul>-->
                     </div>
                     <div class="col-12 col-lg-auto">
                         <ul class="nav justify-content-end align-items-end nav-sticky-top">
@@ -272,7 +291,8 @@
                 </div>
             </div>
         </section>
-        <section class="py-3 py-lg-5">
+
+        <section class="py-3 py-lg-5" id="scrollSPYContainer">
             <div class="container py-4">
                 <div class="row">
                     <div class="col-12 col-lg-12">
@@ -705,7 +725,7 @@
     </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="vendors/jquery/jquery-3.5.1.slim.min.js"></script>
 <script src="vendors/bootstrap/dist/js/popper.min.js"></script>
 <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 

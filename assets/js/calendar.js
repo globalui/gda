@@ -10,22 +10,22 @@ $(document).ready(function () {
         'eventDisplayDefault': true,
         calendarEvents: [{
             id: 1,
-            date: "May/13/2020",
+            date: "Sep/23/2020",
             type: "not-available"
         },
             {
                 id: 2,
-                date: "May/14/2020",
+                date: "Sep/24/2020",
                 type: "fillingfast"
             },
             {
                 id: 3,
-                date: "May/15/2020",
+                date: "Sep/25/2020",
                 type: "available"
             },
             {
                 id: 3,
-                date: "May/15/2021",
+                date: "Sep/25/2021",
                 type: "available"
             }
         ]
@@ -62,6 +62,12 @@ $(document).ready(function () {
 
 
 //mobile custom show moth list
-$(document).on('click','#monthTrigger',function(){
-    $('#calendar').toggleClass('sidebar-hide');
+
+$(document).ready(function() {
+    if($(window).width() <= 1024) {
+        $(document).on('click','#monthTrigger',function(){
+            $('#calendar').toggleClass('sidebar-hide');
+        });
+
+    }
 });

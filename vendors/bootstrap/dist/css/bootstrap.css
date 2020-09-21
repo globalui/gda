@@ -10754,7 +10754,7 @@ header#header button.navbar-toggler svg path {
   /* same as padding-left set on li */
 }
 
-.custom-nav-tab li.active {
+.custom-nav-tab .active {
   border-bottom: 3px solid #268f12;
 }
 
@@ -10891,30 +10891,16 @@ header#header button.navbar-toggler svg path {
   content: "";
 }
 
-.custom-accordion .card {
-  padding: 1rem;
-  border: 1px solid;
-  border-color: #dee2e6;
-  margin-bottom: 0.5rem;
-  border-radius: 10px;
-  transition: all 0.3s ease;
+.dms-calendar-booking .mbsc-cal-txt.mbsc-hover:before {
+  background: none;
 }
-.custom-accordion .card.active-card {
-  border-color: #268f12;
+
+.dms-calendar-booking .mbsc-sc-whl-gr-c {
+  margin: 0 30px;
 }
-.custom-accordion .accordion-link-tigger {
-  justify-content: space-between;
-}
-.custom-accordion .accordion-link-tigger:after {
-  transition: all 0.5s ease;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  top: 15px;
-  right: 15px;
-  content: "";
-}
-.custom-accordion .accordion-link-tigger[aria-expanded=true]:after {
-  content: "";
+
+.dm-calendar-booking .mbsc-fr-c {
+  text-align: center;
 }
 
 @media (max-width: 992px) {

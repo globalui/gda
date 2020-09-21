@@ -16,7 +16,7 @@
     width: 200px;
     height: 100%;
     float: left;
-    background-color: #0b6674;
+    background-color: #607D8B;
     color: #fff;
     z-index: 1; 
     -webkit-transition: all .3s ease;
@@ -26,6 +26,7 @@
         -ms-transform: translateX(0);
             transform: translateX(0);
     z-index: 2;
+    overflow-y: scroll;
 }
 
 .sidebar-hide .calendar-sidebar {
@@ -54,6 +55,9 @@
 .calendar-sidebar > .calendar-year {
     padding: 20px;
     text-align: center;
+    position: sticky;
+    top:0;
+    background-color: #607D8B;
 }
 .calendar-sidebar > .calendar-year > p {
     margin: 0;
@@ -103,10 +107,10 @@
     font-size: 13px;
 }
 .calendar-sidebar > .month-list > .calendar-months > li:hover {
-    background-color: #17a2b8;
+    background-color:  #4e6a78;
 }
 .calendar-sidebar > .month-list > .calendar-months > li.active-month {
-    background-color: #17a2b8;
+    background-color: #4e6a78;
 }
 
 .calendar-inner {
@@ -171,8 +175,8 @@ tr.calendar-body .calendar-day .day {
     margin: 0 auto;
     border-radius: 50%;
     text-align: center;
-    color: #5a5a5a;
-    border: 1px solid transparent;
+    color: #c2c2c2;
+    border: none;
     -webkit-transition: all .3s ease, -webkit-transform .5s ease;
     transition: all .3s ease, -webkit-transform .5s ease;
     -o-transition: all .3s ease, transform .5s ease;
@@ -181,7 +185,7 @@ tr.calendar-body .calendar-day .day {
     cursor: pointer;
 }
 tr.calendar-body .calendar-day .day:hover {
-    background-color: #dadada;
+    background-color: #fff;
 }
 tr.calendar-body .calendar-day .day:active {
     -webkit-transform: scale(0.9);
@@ -191,8 +195,7 @@ tr.calendar-body .calendar-day .day:active {
 
 tr.calendar-body .calendar-day .day.calendar-active,
 tr.calendar-body .calendar-day .day.calendar-active:hover {
-    color: #5a5a5a;
-    border-color: rgba(0, 0, 0, 0.5);
+    border: none;
 }
 
 tr.calendar-body .calendar-day .day.calendar-today {
