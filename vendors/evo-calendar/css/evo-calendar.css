@@ -169,7 +169,9 @@ tr.calendar-header .calendar-header-day {
   
 tr.calendar-body .calendar-day .day {
     position: relative;
-    padding: 7px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
     height: 50px;
     width: 50px;
     margin: 0 auto;
