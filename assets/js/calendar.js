@@ -3,16 +3,17 @@
 $(document).ready(function () {
 
     $('#calendar').evoCalendar({
-        eventListToggler:false,
+        eventListToggler: false,
 
         getActiveEvents: true,
         theme: 'Midnight Blue',
         'eventDisplayDefault': true,
-        calendarEvents: [{
-            id: 1,
-            date: "Sep/23/2020",
-            type: "not-available"
-        },
+        calendarEvents: [
+            {
+                id: 1,
+                date: "Sep/23/2020",
+                type: "not-available"
+            },
             {
                 id: 2,
                 date: "Sep/24/2020",
@@ -30,7 +31,7 @@ $(document).ready(function () {
             }
         ]
 
-    })
+    });
 
     function customCalenderFunction() {
         var setStartYear = '2020';
@@ -52,9 +53,10 @@ $(document).ready(function () {
             $('[data-year-val="prev"]').removeClass('d-none');
         }
     }
+
     customCalenderFunction();
 
-    $('.calendar-year button').on('click', function(){
+    $('.calendar-year button').on('click', function () {
         customCalenderFunction();
     });
 
@@ -63,9 +65,9 @@ $(document).ready(function () {
 
 //mobile custom show moth list
 
-$(document).ready(function() {
-    if($(window).width() <= 1024) {
-        $(document).on('click','#monthTrigger',function(){
+$(document).ready(function () {
+    if ($(window).width() <= 1024) {
+        $(document).on('click', '#monthTrigger', function () {
             $('#calendar').toggleClass('sidebar-hide');
         });
 

@@ -1,11 +1,14 @@
-.dms-calendar-booking .mbsc-cal-txt.mbsc-hover:before {
-  background: none;
+.vs-event-not-available, .vs-event-fillingfast, .vs-event-available {
+  border: 1px solid $green !important;
+  background-color: rgb(39 145 18 / 11%) !important;
+  color:#000 !important;
+
+  &.calendar-active {
+    background-color: $green-dark !important;
+    color:#fff !important;
+  }
 }
 
-.dms-calendar-booking .mbsc-sc-whl-gr-c {
-  margin: 0 30px;
-}
-
-.dm-calendar-booking .mbsc-fr-c {
-  text-align: center;
+.calendar-inner{
+  padding: 50px 20px !important;
 }

@@ -10892,16 +10892,18 @@ header#header button.navbar-toggler svg path {
   content: "";
 }
 
-.dms-calendar-booking .mbsc-cal-txt.mbsc-hover:before {
-  background: none;
+.vs-event-not-available, .vs-event-fillingfast, .vs-event-available {
+  border: 1px solid #268f12 !important;
+  background-color: rgba(39, 145, 18, 0.11) !important;
+  color: #000 !important;
+}
+.vs-event-not-available.calendar-active, .vs-event-fillingfast.calendar-active, .vs-event-available.calendar-active {
+  background-color: #0d1f20 !important;
+  color: #fff !important;
 }
 
-.dms-calendar-booking .mbsc-sc-whl-gr-c {
-  margin: 0 30px;
-}
-
-.dm-calendar-booking .mbsc-fr-c {
-  text-align: center;
+.calendar-inner {
+  padding: 50px 20px !important;
 }
 
 @media (max-width: 992px) {

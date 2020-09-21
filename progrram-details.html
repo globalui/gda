@@ -247,7 +247,7 @@
                 <div class="row justify-content-between">
                     <div class="col-12 col-lg-auto d-flex align-items-end">
                         <nav class="navbar custom-nav-tab overflow-auto">
-                            <ul class="nav">
+                            <ul class="nav" data-scrollSpy="true">
                                 <li class="nav-item">
                                     <a class="nav-link active text-white btn btn-lg px-4" href="#Overview">Overview</a>
                                 </li>
@@ -421,16 +421,10 @@
                     <div class="col-12 col-lg-12">
                         <div id="Date" class="tab-pane active">
                             <h3 class="h2">Date</h3>
-                            <div mbsc-form class="dms-calendar-booking bh-tr">
-                                <div class="w-100 border shadow radius-10 overflow-hidden">
-                                    <div id="calendar"></div>
-                                    <!--<div class="col-xs-12 dates_indicator mt-3 small">
-                                        <span class="indicator_available position-relative">Available</span>
-                                        <span class="indicator_fast_filling position-relative">Filling Fast</span>
-                                        <span class="indicator_notavailable position-relative">Not Available</span>
-                                        <span class="indicator_pastdate position-relative">Past Date</span>
-                                    </div>-->
-                                </div>
+
+                            <div id="calendar" class="col-lg-8 border shadow radius-10 px-0 ml-0"></div>
+
+                          <!--  <div mbsc-form class="dms-calendar-booking"> -->
                             </div>
                         </div>
                     </div>
@@ -801,6 +795,9 @@
 
 <link rel="stylesheet" type="text/css" href="vendors/evo-calendar/css/evo-calendar.css">
 <link rel="stylesheet" type="text/css" href="vendors/evo-calendar/css/evo-calendar.midnight-blue.css">
+
+
+<script src="assets/js/scrollSpy.js"></script>
 
 </body>
 </html>
