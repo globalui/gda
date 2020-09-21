@@ -10826,7 +10826,11 @@ header#header button.navbar-toggler svg path {
   background-color: #fff;
   padding: 1rem;
   position: relative;
-  margin: 10px;
+}
+@media (min-width: 992px) {
+  .custom-owl-itinerary .owl-caption {
+    margin: 10px;
+  }
 }
 .custom-owl-itinerary l-item-img {
   width: 100%;

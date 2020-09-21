@@ -70,7 +70,9 @@
     background-color: #fff;
     padding: 1rem;
     position: relative;
-    margin: 10px;
+    @media(min-width: 992px) {
+      margin: 10px;
+    }
   }
   l-item-img {
     width: 100%;
