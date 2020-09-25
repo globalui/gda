@@ -1,9 +1,9 @@
 .vs-event-not-available, .vs-event-fillingfast, .vs-event-available {
   border: 1px solid $green !important;
-  background-color: rgb(39 145 18 / 11%) !important;
+  background-color: rgba(39, 145, 18,0.4) !important;
   color:#000 !important;
 
-  &.calendar-active {
+  &.calendar-active { 
     background-color: $green-dark !important;
     color:#fff !important;
   }

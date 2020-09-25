@@ -4,9 +4,12 @@
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   margin-bottom: $breadcrumb-margin-bottom;
   @include font-size($breadcrumb-font-size);
-  list-style: none;
-  background-color: $breadcrumb-bg;
+  list-style: none; 
   @include border-radius($breadcrumb-border-radius);
+  &-white,&-white a{
+    color:$gray-500;
+  }
+  font-size: 80%;
 }
 
 .breadcrumb-item {

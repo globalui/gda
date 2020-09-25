@@ -1,3 +1,8 @@
+:root{
+  --light-org:#e79f74;
+  --light-blu:#5ecfdf;
+  --light-grn:#cec9a6;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -10,4 +15,4 @@ body {
   @media (min-width: 992px) {
     border-bottom: none !important;
   }
-}
+}   
