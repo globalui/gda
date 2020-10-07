@@ -12184,6 +12184,11 @@ footer {
 
 .custom-form label {
   font-weight: 600;
-  width: 80%;
+  font-size: 80%;
+}
+
+.custom-form .form-control {
+  padding: 2px 5px;
+  font-size: 12px;
 }
 /*# sourceMappingURL=bootstrap.css.map */

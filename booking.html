@@ -143,8 +143,9 @@
                                         </small>
                                         <div class="bg-light radius-10 p-2 w-100 d-flex flex-wrap flex-lg-nowrap">
                                             <div class="w-100">
-                                                <label for="dateTrip" class="font-weight-bold small">Choose Your
-                                                    Date</label>
+                                                <label for="dateTrip" class="font-weight-bold small">
+                                                    Choose your Trip Start Date
+                                                </label>
                                                 <select id="dateTrip" class="form-control form-control-sm">
                                                     <option value="">7/Oct/2020</option>
                                                     <option value="">1/July/2021</option>
@@ -170,7 +171,7 @@
                                             <h5 class="h4">Lead Traveller Details </h5>
                                         </div>
                                         <div class="form-group col-12 col-lg-6">
-                                            <label class="required">First Name</label>
+                                            <label class="required">First Name <small> (as per passport)</small></label>
                                             <div class="d-flex">
                                                 <select class="form-control w-25 mr-1">
                                                     <option value="1">Mr</option>
@@ -192,6 +193,18 @@
                                             <label class="required">Phone</label>
                                             <input type="number" name="phone" class="form-control">
                                         </div>
+                                        <div class="form-group col-12 col-lg-6">
+                                            <label class="required">Date of Birth</label>
+                                            <input type="date" name="date" class="form-control">
+                                        </div> 
+                                        <div class="form-group col-12 col-lg-6">
+                                            <label class="required">Gender</label>
+                                            <select class="form-control">
+                                                <option>Male</option>
+                                                <option value="2">Female</option>
+                                            </select>
+                                        </div>
+                                        
 
                                         <div class="form-group col-12 col-lg-6">
                                             <label class="required">Country of Residence</label>
@@ -200,9 +213,14 @@
                                                 <option value="2">India</option>
                                             </select>
                                         </div>
+                                        
+
                                         <div class="form-group col-12 col-lg-6">
-                                            <label class="required">Date of Birth</label>
-                                            <input type="date" name="date" class="form-control">
+                                            <label class="required">Nationality </label>
+                                            <select class="form-control">
+                                                <option>Country</option>
+                                                <option value="2">India</option>
+                                            </select>
                                         </div>
                                     </div>
 
@@ -210,7 +228,7 @@
                                         <div class="col-12">
                                             <h5 class="h4">Other Traveller Details </h5>
                                         </div>
-                                        <div class="form-group col-12 col-lg-6">
+                                        <div class="form-group col-12 col-lg-5">
                                             <label class="required">First Name</label>
                                             <div class="d-flex">
                                                 <select class="form-control w-25 mr-1">
@@ -221,9 +239,16 @@
                                                 <input type="text" name="Cname" class="form-control">
                                             </div>
                                         </div>
-                                        <div class="form-group col-12 col-lg-6">
+                                        <div class="form-group col-12 col-lg-5">
                                             <label class="required">Last Name</label>
                                             <input type="text" name="Lname" class="form-control">
+                                        </div>
+                                        <div class="form-group col-12 col-lg-2">
+                                            <label class="required">Gender</label>
+                                            <select class="form-control">
+                                                <option>Male</option>
+                                                <option value="2">Female</option>
+                                            </select>
                                         </div>
                                     </div> 
                                     <div class="row">
@@ -280,13 +305,7 @@
                                                     Price after discounts
                                                 </td>
                                                 <td>$1376</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-right w-50">
-                                                    Taxes & Fees
-                                                </td>
-                                                <td>$284</td>
-                                            </tr>
+                                            </tr> 
                                         </tbody>
                                         <tfoot>
                                             <tr>
