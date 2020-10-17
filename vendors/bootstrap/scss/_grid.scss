@@ -104,4 +104,8 @@ $breakPoint:(sm:300px,md:768px, lg:992px, xl:1200px, xxl:1400px);
 .d-grid-gap-1{
   grid-column-gap:$gap;
   grid-row-gap:$gap;
+} 
+.d-grid-gap-2{
+  grid-column-gap:30px;
+  grid-row-gap:30px;
 }

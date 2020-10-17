@@ -2041,6 +2041,11 @@ html {
   grid-row-gap: 1rem;
 }
 
+.d-grid-gap-2 {
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
 .d-none {
   display: none !important;
 }

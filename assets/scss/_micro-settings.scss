@@ -128,6 +128,19 @@
       }
     }
   }
+  &.with-blog-pages { 
+    &:after {
+      @include selectorContent(200%, 15%, absolute, -100px, unset);
+      bottom: -4%;
+    }
+
+    @media (min-width:1250px) { 
+
+      &:after {
+        @include selectorContent(200%,60%, absolute, -100px, unset);
+      }
+    }
+  }
 }
 
 //owl
