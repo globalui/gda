@@ -51,13 +51,22 @@ function generateHtml() {
     html += '<div id="photoGalleryCarousel" class="photo-gallery-nav position-static owl-carousel owl-theme owl-left-right-navbar  px-lg-4 ">';
 
     var pictureCountr = 0;
-    $('[data-gallery="true"] picture').each(function () {
+    $('[data-gallery="true"] .picture').each(function () {
         $(this).attr('data-count', pictureCountr++);
-        var getImg = $(this).attr('data-img');
+        var getMediaType = $(this).attr('data-media');
+        var getImg = $(this).attr('data-src');
         console.log(getImg);
-        html += '<div class="item">';
-        html += '<img src="' + getImg + '">';
+        html += '<div class="item h-100">';
+
+        if(getMediaType == 'video'){
+            html += '<iframe frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"' +
+                'allowfullscreen  class="responsive-iframe" src="https://www.youtube.com/embed/' + getImg + '"></iframe>';
+        }else{
+            html += '<img src="' + getImg + '">';
+        }
         html += '</div>';
+
+
     });
 
     html += '</div>';
