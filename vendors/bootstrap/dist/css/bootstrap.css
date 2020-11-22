@@ -527,7 +527,7 @@ mark,
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 95%;
+    max-width: 1350px;
   }
 }
 @media (min-width: 1540px) {
@@ -561,7 +561,7 @@ mark,
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 95%;
+    max-width: 1350px;
   }
 }
 @media (min-width: 1540px) {

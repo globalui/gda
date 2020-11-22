@@ -575,7 +575,13 @@
                     markup += '<td class="' + dayClass + '">';
 
                     var thisDay = _.formatDate(_.$label.months[_.$active.month] + ' ' + day + ' ' + _.$active.year, _.options.format);
-                    markup += '<div class="day" role="button" data-date-val="' + thisDay + '">' + day + '</div>';
+
+                   /* if(thisDay == _.options.calendarEvents[j].date ){
+                        var thisPrice = _.options.calendarEvents[j];
+                        console.log(thisPrice);
+                    }*/
+
+                    markup += '<div class="day" role="button" data-price-val="'+thisDay +'" data-date-val="' + thisDay + '">' + day + '</div>';
                     day++;
                 } else {
                     markup += '<td>';
@@ -613,12 +619,11 @@
         }
     };
 
-    EvoCalendar.prototype.addEventIndicator = function (active_date, type) {
+    EvoCalendar.prototype.addEventIndicator = function (active_date, type,price) {
         var _ = this, htmlToAppend, thisDate = _.$elements.innerEl.find('[data-date-val="' + active_date + '"]');
-
         if (thisDate.find('span.event-indicator').length === 0) {
-            thisDate.addClass('vs-calender-active vs-event-' + type);
-            thisDate.append('<span class="event-indicator"></span>');
+            thisDate.addClass('vs-calender-active vs-event-' + type).attr('data-price-val',price);
+            thisDate.append('<span class="event-indicator" data-status="'+type+'"></span>');
         }
 
         if (thisDate.find('span.event-indicator > .type-bullet > .type-' + type).length === 0) {
@@ -627,7 +632,7 @@
         }
     }
 
-    EvoCalendar.prototype.removeEventIndicator = function (active_date, type) {
+    EvoCalendar.prototype.removeEventIndicator = function (active_date, type,price) {
         var _ = this;
         var eventLength = 0;
 
@@ -667,13 +672,13 @@
                 var active_date = _.formatDate(_.$label.months[_.$active.month] + ' ' + (x + 1) + ' ' + _.$active.year, _.options.format);
 
                 if (active_date == _.options.calendarEvents[i].date) {
-                    _.addEventIndicator(active_date, _.options.calendarEvents[i].type);
+                    _.addEventIndicator(active_date, _.options.calendarEvents[i].type, _.options.calendarEvents[i].price);
                 }
                 else if (_.options.calendarEvents[i].everyYear) {
                     var d = _.formatDate(active_date, 'mm/dd');
                     var dd = _.formatDate(_.options.calendarEvents[i].date, 'mm/dd');
                     if (d == dd) {
-                        _.addEventIndicator(active_date, _.options.calendarEvents[i].type);
+                        _.addEventIndicator(active_date, _.options.calendarEvents[i].type, _.options.calendarEvents[i].price);
                     }
                 }
             }
