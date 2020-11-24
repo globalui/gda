@@ -558,7 +558,7 @@
 
         title = _.formatDate(new Date(_.$label.months[_.$active.month] + ' 1 ' + _.$active.year), _.options.titleFormat, _.options.language);
 
-        var _triggerMonth ='';
+         var _triggerMonth ='';
         _.$elements.innerEl.find('.calendar-table th').html('<button id="monthTrigger" class="btn">'+title+' <i class="d-lg-none fa fa-angle-down"></i></button>');
 
         _.$elements.innerEl.find('.calendar-body').remove(); // Clear days
@@ -576,10 +576,10 @@
 
                     var thisDay = _.formatDate(_.$label.months[_.$active.month] + ' ' + day + ' ' + _.$active.year, _.options.format);
 
-                    /* if(thisDay == _.options.calendarEvents[j].date ){
-                     var thisPrice = _.options.calendarEvents[j];
-                     console.log(thisPrice);
-                     }*/
+                   /* if(thisDay == _.options.calendarEvents[j].date ){
+                        var thisPrice = _.options.calendarEvents[j];
+                        console.log(thisPrice);
+                    }*/
 
                     markup += '<div class="day" role="button"  data-date-val="' + thisDay + '">' + day + '</div>';
                     day++;
